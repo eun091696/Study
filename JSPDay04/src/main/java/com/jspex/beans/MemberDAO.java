@@ -13,7 +13,7 @@ public class MemberDAO {
 	ResultSet rs;
 	
 	public ArrayList<MemberVO> select(String name) {
-		String query = "SELECT * FROM tbl_member WHERE NAME = ?";
+		String query = "SELECT * FROM member WHERE NAME = ?";
 		ArrayList<MemberVO> members = new ArrayList<>();
 		MemberVO member = null;
 		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd");

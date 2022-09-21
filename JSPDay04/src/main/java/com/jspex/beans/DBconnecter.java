@@ -9,7 +9,7 @@ public class DBconnecter {
 		Connection conn = null;
 		
 		try {
-			String url = "jdbc:mariadb://localhost:3307/tbl_member";
+			String url = "jdbc:mariadb://localhost:3307/member";
 			String dbID = "ace";
 			String dbPassword = "1234";
 			Class.forName("org.mariadb.jdbc.Driver");
