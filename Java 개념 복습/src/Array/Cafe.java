@@ -10,9 +10,18 @@ public class Cafe {
 		//주문은 총 5개까지 가능
 		String orderList[] = new String[5];
 		int total = 0;
+		for(int i = 0; i < orderList.length; i++) {
+			orderList[i] = "";
+		}
 		
 		while(true) {
 			System.out.println("☆★☆★Cafe☆★☆★");
+			System.out.println("현재 금액:" + total + "원");
+			System.out.println("주문내역------");
+			for(int i = 0; i < count; i++) {
+				System.out.println(i + 1 + "." + orderList[i]);
+			}
+			System.out.println("--------------");
 			System.out.println("1. 주문하기");
 			System.out.println("2. 취소하기");
 			System.out.println("3. 결제하기");
@@ -22,7 +31,7 @@ public class Cafe {
 			if(num == 1) {
 				String menuName = "";
 				int menuPrice = 0;
-				
+				System.out.println("☆★☆★Menu☆★☆★");
 				System.out.println("1. 아메리카노\t3800원");				
 				System.out.println("2. 에스프레소\t2400원");				
 				System.out.println("3. 카페라떼\t4200원");				
@@ -60,7 +69,7 @@ public class Cafe {
 				for(int i = 0; i < count; i++) {
 					System.out.println(i + 1 + "." + orderList[i]);
 				}
-				System.out.print("취소할 메뉴 변호:");
+				System.out.print("취소할 메뉴 번호:");
 				int cancelNum = sc.nextInt();
 				if(1 <= cancelNum && cancelNum <= count) {
 					String delMenu = orderList[cancelNum-1];
