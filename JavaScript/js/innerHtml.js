@@ -28,7 +28,7 @@ function loadList() { //리스트 만들기
   userList.forEach((user, index) => {
     tbody.innerHTML += `
       <tr>
-        <td>${index}</td>
+        <td>${index + 1}</td>
         <td>${user.name2}</td>
         <td>${user.address}</td>
         <td>${user.phone}</td>
